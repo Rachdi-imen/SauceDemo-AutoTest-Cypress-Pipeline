@@ -1,0 +1,27 @@
+{
+  "name": "saucedemoautotestwithcypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+       "cy:open:desktop": "npx cypress open --browser chrome headless --config viewportWidth=1500 viewportHeight=1320",
+    "cy:open:mobile": "npx cypress open --browser chrome --config viewportWidth=410 viewportHeight=880"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinations": true,
+    "stepDefinitions": "cypress/e2e/"
+  },
+  "dependencies": {
+    "mocha": "^10.4.0"
+  }
+}
